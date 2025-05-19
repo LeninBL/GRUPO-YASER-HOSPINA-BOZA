@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorteo de Equipos</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <h1>Crea <strong >equipos al azar </strong>a partir de una lista de nombres de forma automatica y gratuita</h1>
+
+  <div class="container">
+    <!-- Panel izquierdo -->
+    <div class="panel">
+      <h2>1. Ingresar los participantes</h2>
+      <textarea id="participantes" placeholder="Cada participante debe estar en una nueva linea"></textarea>
+      <div id="contador" class="error">Agrega un * para indicar el Lider del grupo *Lider</div>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="panel">
+      <h2>2. Cómo Dividir</h2>
+
+      <div class="radio-group">
+        <label><input type="radio" name="modo" value="equipos" checked> Cantidad de Equipos</label>
+        <label><input type="radio" name="modo" value="por_equipo"> Participantes por Equipo</label>
+      </div>
+
+
+      <input style="margin-top: 10px;" type="number" id="cantidad" min="1" required>
+      <div id="errorCantidad" class="error"></div>
+
+      <h3>3. Título</h3>
+      <input type="text" id="titulo" placeholder="Copa del Mudo Qatar 2022" maxlength="50">
+
+      <div>
+        <button onclick="limpiarTodo()">Limpiar</button>
+        <button onclick="generarEquipos()">Generar equipos</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="resultados"></div>
+
+  <div class="botones-inferiores" id="acciones" style="display: none;">
+    <button id="btnDescargarJPG" onclick="descargarComoJPG()">⬇ Descargar JPG</button>
+    <button id="btnCopiarPortapapeles" onclick="copiarAPortapapeles()">📋 Copiar Todo</button>
+    <button id="btnCopiarColumnas" onclick="copiarColumnas()">📋 Copiar por Columnas</button>
+  </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
