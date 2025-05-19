@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruleta Aula Virtual</title>
+  <link rel="stylesheet" href="css/ruleta.css">
+</head>
+
+<body>
+  <div class="contenedorPrincipal">
+    <div id="top-bar">
+      <div id="respuesta">RESPUESTA</div>
+      <div class="botones">
+        <button id="iniciar">Iniciar</button>
+        <button id="reiniciar">Reiniciar</button>
+      </div>
+    </div>
+    <div id="ruleta-container">
+      <div style="position: relative; width: 300px; height: 300px;">
+        <canvas id="canvas" width="300" height="300"></canvas>
+        <div id="overlay-text">haz clic para girarlo</div>
+        <div id="triangulo"></div>
+      </div>
+      <div id="panel-lateral">
+        <textarea id="textarea-elementos"></textarea>
+        <div class="botones" style="margin-top: 10px;">
+          <button>Título</button>
+          <button>Editar</button>
+          <button>...esconder</button>
+        </div>
+        <div id="indicaciones">
+          <p><strong>SPACE</strong> Giralo</p>
+          <p><strong>S</strong> Ocultar el elemento seleccionado</p>
+          <p><strong>R</strong> Reiniciar</p>
+          <p><strong>E</strong> Editar</p>
+          <p><strong>F</strong> Pantalla completa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/ruleta.js"></script>
+</body>
+
+</html>
